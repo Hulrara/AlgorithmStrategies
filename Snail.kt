@@ -1,11 +1,9 @@
 fun main() {
 
 }
-
-val m = 6
-val n = 10
-
 class Snail {
+    val m = 6
+    val n = 10
     val cache = Array(n){IntArray(m*2){-1} }
     fun solve(climbed: Int, day: Int): Int {
         if (day == m) {
