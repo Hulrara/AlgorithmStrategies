@@ -13,7 +13,7 @@ fun main() {
         }
         dictionary.makeGraph()
         stringBuilder.appendln(dictionary.solve())
-    }
+    } 
     print(stringBuilder)
 }
 
