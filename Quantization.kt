@@ -2,8 +2,9 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.lang.StringBuilder
 
-lateinit var array: IntArray
+
 fun main() {
+    lateinit var array: IntArray
     val bf = BufferedReader(InputStreamReader(System.`in`))
     val stringBuilder = StringBuilder()
     val c = bf.readLine().toInt()

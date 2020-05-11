@@ -3,13 +3,12 @@ import java.io.InputStreamReader
 import javax.xml.stream.events.Characters
 import kotlin.math.min
 
-val cache = IntArray(100002)
+
 fun main() {
     val bf = BufferedReader(InputStreamReader(System.`in`))
     val stringBuilder = StringBuilder()
     val c = bf.readLine().toInt()
     for (i in 1..c) {
-        cache.fill(-1)
         val c = bf.readLine().map { Character.getNumericValue(it) }.toIntArray()
         stringBuilder.appendln(Pi().solve(0, c))
     }
@@ -17,6 +16,7 @@ fun main() {
 }
 
 class Pi {
+    val cache = IntArray(100002)
     fun solve(index: Int, intArray: IntArray): Int {
         if (intArray.isEmpty()) {
             return 0

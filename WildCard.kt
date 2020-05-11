@@ -2,7 +2,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.lang.StringBuilder
 
-val cache = Array(101) { IntArray(101) { -1 } }
+
 fun main() {
 
     val bf = BufferedReader(InputStreamReader(System.`in`))
@@ -15,9 +15,6 @@ fun main() {
 
         for (j in 1..n) {
             val check = bf.readLine()
-            cache.fill(IntArray(101){-1},0,cache.size)
-//            if (WildCard().solve(wildCard, check))
-//                sb.appendln(check)
             if (WildCard().memoSolve(wildCard, check, 0, 0) == 1)
                 sb.appendln(check)
         }
@@ -26,7 +23,7 @@ fun main() {
 }
 
 class WildCard {
-
+    val cache = Array(101) { IntArray(101) { -1 } }
     fun solve(wildCard: String, check: String): Boolean {
         var pos = 0
 
