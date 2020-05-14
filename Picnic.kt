@@ -38,14 +38,6 @@ class Picnic {
     이후 해당 students 로 재귀함수 방식으로 해결한다.
     */
 
-    /*
-    나의 풀이
-    현재 짝이 없는 students, 짝 현황은 couple 로 받는다.
-    기저사례 = 더이상 짝을 지을 학생이 없는 경우, 해당 학생으로 지을 짝이 없는경우
-
-    students 의 첫번째 인덱스를 받아 짝을 지을 수 있는 케이스를 모두 찾아, 해당 인덱스와 짝으로 이루어진 인덱스를 제외하고 처리한다.
-    이후 해당 students 로 재귀함수 방식으로 해결한다.
-    */
     fun couple(students: ArrayList<Int>, couple: ArrayList<Pair<Int, Int>>):Int {
         if (students.isEmpty()) {
             return 1
